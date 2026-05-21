@@ -15,7 +15,7 @@
 
 ## Description
 
-Web application for the **International Energy Agency (IEA)** to manage and monitor energy indicators across international Energy Monitoring Centers.
+Web Frontend application for the **International Energy Agency (IEA)** to manage and monitor energy indicators across international Energy Monitoring Centers.
 
 Energy analysts can register Energy Report Items per regional operator and energy type, and review them on a real-time dashboard. Country data is auto-resolved from the [DummyJSON API](https://dummyjson.com) and matched against Energy Monitoring Centers stored in a local json-server backend.
 
