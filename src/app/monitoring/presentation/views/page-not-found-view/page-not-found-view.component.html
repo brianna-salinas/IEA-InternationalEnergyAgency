@@ -1,0 +1,12 @@
+<main class="not-found-wrapper" role="main" aria-labelledby="error-heading">
+  <div class="error-visual-container">
+    <h1 id="error-heading" class="error-code">404</h1>
+    <h2 class="mat-headline-5">{{ 'not-found.title' | translate }}</h2>
+    <p class="error-explanation">
+      {{ 'not-found.message' | translate:{ route: deadRoute() } }}
+    </p>
+    <button mat-raised-button color="accent" (click)="navigateToHome()" class="action-home-btn">
+      {{ 'not-found.btn-return' | translate }}
+    </button>
+  </div>
+</main>

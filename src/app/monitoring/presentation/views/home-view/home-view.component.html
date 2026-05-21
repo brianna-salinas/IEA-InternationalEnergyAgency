@@ -1,0 +1,24 @@
+<main class="view-content-wrapper" role="main" aria-labelledby="home-view-title">
+  <header class="hero-header-section">
+    <h1 id="home-view-title" class="mat-headline-4 main-heading">{{ 'home.title' | translate }}</h1>
+    <p class="mat-body-1 platform-intro">{{ 'home.subtitle' | translate }}</p>
+  </header>
+
+  <section class="reports-dashboard-section" aria-labelledby="section-dashboard-title">
+    <h2 id="section-dashboard-title" class="mat-headline-5 section-heading">{{ 'home.section-title' | translate }}</h2>
+
+    @if (facade.reports().length === 0) {
+      <div class="empty-state-notice" role="status" aria-live="polite">
+        <p>{{ 'home.empty-state' | translate }}</p>
+      </div>
+    } @else {
+      <div class="reports-grid-container" role="list" aria-label="Energy Reports List">
+        @for (report of facade.reports(); track report.id) {
+          <div class="grid-item" role="listitem">
+            <app-report-summary-card [reportItem]="report"></app-report-summary-card>
+          </div>
+        }
+      </div>
+    }
+  </section>
+</main>

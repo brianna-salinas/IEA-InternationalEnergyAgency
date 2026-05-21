@@ -1,0 +1,38 @@
+.toolbar-left-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.iea-brand-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+.platform-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+.toolbar-center-nav {
+  display: flex;
+  gap: 8px;
+  margin-left: 32px;
+}
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+.active-link {
+  background: rgba(255, 255, 255, 0.15);
+  border-bottom: 2px solid white;
+  border-radius: 4px 4px 0 0;
+}
+
+/* Responsive toolbar */
+@media (max-width: 768px) {
+  .platform-title {
+    display: none;
+  }
+  .toolbar-center-nav {
+    margin-left: 8px;
+  }
+}

@@ -1,0 +1,42 @@
+.energy-summary-card {
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border: 1px solid #e0e0e0;
+}
+.card-country-header {
+  font-size: 1.2rem;
+  color: #1a237e;
+  font-weight: 600;
+}
+.card-body-metrics {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+}
+.metric-label {
+  color: #555;
+}
+.metric-value {
+  font-weight: 500;
+}
+.emphasis {
+  color: #2e7d32;
+  font-weight: bold;
+}
+.card-footer-timestamps {
+  padding: 12px 16px;
+  background-color: #f5f5f5;
+  font-size: 0.8rem;
+  color: #666;
+}
+.footer-metadata-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

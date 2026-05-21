@@ -1,0 +1,28 @@
+{
+  "toolbar": {
+    "title": "Plataforma de Monitoreo Energético IEA",
+    "nav-home": "Inicio",
+    "nav-new": "Nuevo Reporte Energético"
+  },
+  "home": {
+    "title": "Inicio",
+    "subtitle": "Monitoreo Energético Internacional.",
+    "section-title": "Mis Reportes Energéticos",
+    "empty-state": "Sin registros"
+  },
+  "new-report": {
+    "title": "Nuevo Reporte Energético",
+    "subtitle": "Registrar Reportes Energéticos Internacionales",
+    "label-energy-type": "Tipo de Energía*",
+    "label-operator": "Operador Regional*",
+    "label-region": "Región Asociada",
+    "btn-create": "Crear",
+    "btn-cancel": "Cancelar",
+    "validation-production": "La producción debe ser mayor que 0"
+  },
+  "not-found": {
+    "title": "Página No Encontrada",
+    "message": "La ruta '{{ route }}' no fue encontrada.",
+    "btn-return": "Volver al Inicio"
+  }
+}

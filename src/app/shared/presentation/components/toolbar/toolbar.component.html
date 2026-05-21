@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" role="banner" aria-label="Main Application Header">
+  <div class="toolbar-left-container">
+    <img [src]="logoUrl" alt="IEA Logo" class="iea-brand-logo" aria-hidden="false" />
+    <span class="platform-title">{{ 'toolbar.title' | translate }}</span>
+  </div>
+
+  <nav class="toolbar-center-nav" role="navigation" aria-label="Primary Navigation">
+    <a mat-button routerLink="/home" routerLinkActive="active-link">{{ 'toolbar.nav-home' | translate }}</a>
+    <a mat-button routerLink="/energy-reports/new" routerLinkActive="active-link">{{ 'toolbar.nav-new' | translate }}</a>
+  </nav>
+
+  <span class="toolbar-spacer"></span>
+
+  <div class="toolbar-right-actions">
+    <mat-button-toggle-group
+      [value]="state.currentLang()"
+      (change)="onLanguageChange($event.value)"
+      aria-label="Language Switching Selection">
+      <mat-button-toggle value="en">EN</mat-button-toggle>
+      <mat-button-toggle value="es">ES</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</mat-toolbar>

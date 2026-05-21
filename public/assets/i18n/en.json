@@ -1,0 +1,28 @@
+{
+  "toolbar": {
+    "title": "IEA Energy Monitoring Platform",
+    "nav-home": "Home",
+    "nav-new": "New Energy Report"
+  },
+  "home": {
+    "title": "Home",
+    "subtitle": "International Energy Monitoring.",
+    "section-title": "My Energy Reports",
+    "empty-state": "Empty"
+  },
+  "new-report": {
+    "title": "New Energy Report",
+    "subtitle": "Register International Energy Reports",
+    "label-energy-type": "Energy Type*",
+    "label-operator": "Regional Operator*",
+    "label-region": "Associated Region",
+    "btn-create": "Create",
+    "btn-cancel": "Cancel",
+    "validation-production": "Production must be greater than 0"
+  },
+  "not-found": {
+    "title": "Page Not Found",
+    "message": "The route '{{ route }}' was not found.",
+    "btn-return": "Return to Home"
+  }
+}

@@ -1,0 +1,28 @@
+.not-found-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 64px);
+  background-color: #f8f9fa;
+  text-align: center;
+}
+.error-visual-container {
+  max-width: 500px;
+  padding: 40px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+.error-code {
+  font-size: 6rem;
+  margin: 0;
+  color: #c62828;
+  font-weight: 800;
+  line-height: 1;
+}
+.error-explanation {
+  color: #616161;
+  margin-top: 12px;
+  margin-bottom: 28px;
+  font-size: 1rem;
+}

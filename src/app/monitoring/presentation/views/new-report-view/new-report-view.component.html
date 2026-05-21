@@ -1,0 +1,68 @@
+<main class="view-content-wrapper" role="main" aria-labelledby="form-view-title">
+  <header class="hero-header-section">
+    <h1 id="form-view-title" class="mat-headline-4 main-heading">{{ 'new-report.title' | translate }}</h1>
+    <p class="mat-body-1 platform-intro">{{ 'new-report.subtitle' | translate }}</p>
+  </header>
+
+  <mat-card class="form-container-card">
+    <mat-card-content>
+      <form [formGroup]="reportForm" (ngSubmit)="onCreateReport()" class="operational-entry-form" novalidate>
+
+        <mat-form-field appearance="outline" class="full-width-field">
+          <mat-label>{{ 'new-report.label-energy-type' | translate }}</mat-label>
+          <mat-select formControlName="energyType" aria-required="true">
+            @for (type of energyTypes; track type) {
+              <mat-option [value]="type">{{ type | uppercase }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+
+        @if (computedRegion()) {
+          <div class="contextual-info-banner" role="status" aria-live="polite">
+            <span class="banner-label">{{ 'new-report.label-region' | translate }}:</span>
+            <strong class="banner-value">{{ computedRegion() }}</strong>
+          </div>
+        }
+
+        <mat-form-field appearance="outline" class="full-width-field">
+          <mat-label>{{ 'new-report.label-operator' | translate }}</mat-label>
+          <mat-select formControlName="operatorId" aria-required="true">
+            @for (op of filteredOperators(); track op.id) {
+              <mat-option [value]="op.id">{{ op.fullName }} ({{ op.countryCode }})</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+
+        <div class="form-metrics-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Consumption (MWh)</mat-label>
+            <input matInput type="number" formControlName="consumption" min="0" aria-required="true" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Production (MWh)</mat-label>
+            <input matInput type="number" formControlName="production" min="0" aria-required="true" />
+            @if (reportForm.get('production')?.touched && reportForm.get('production')?.hasError('min')) {
+              <mat-error>{{ 'new-report.validation-production' | translate }}</mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Year</mat-label>
+            <input matInput type="number" formControlName="year" aria-required="true" />
+          </mat-form-field>
+        </div>
+
+        <div class="form-actions-row">
+          <button mat-raised-button color="primary" type="submit" [disabled]="reportForm.invalid">
+            {{ 'new-report.btn-create' | translate }}
+          </button>
+          <button mat-button color="warn" type="button" (click)="onCancel()">
+            {{ 'new-report.btn-cancel' | translate }}
+          </button>
+        </div>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+</main>

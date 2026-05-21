@@ -1,0 +1,37 @@
+<mat-toolbar color="primary" role="banner" aria-label="IEA navigation toolbar">
+  <!-- Brand / Logo -->
+  <a routerLink="/home" class="brand-link" aria-label="IEA home">
+    <img
+      [src]="logoUrl"
+      alt="IEA logo"
+      class="brand-logo"
+      (error)="logoUrl = ''"
+    />
+    <span class="brand-name">IEA Energy Monitoring</span>
+  </a>
+
+  <!-- Centre navigation -->
+  <nav class="nav-center" aria-label="Main navigation">
+    <a
+      mat-button
+      class="nav-link"
+      routerLink="/home"
+      routerLinkActive="active-link"
+    >
+      {{ 'nav.home' | translate }}
+    </a>
+    <a
+      mat-button
+      class="nav-link"
+      routerLink="/energy-reports/new"
+      routerLinkActive="active-link"
+    >
+      {{ 'toolbar.nav-new' | translate }}
+    </a>
+  </nav>
+
+  <span class="spacer"></span>
+
+  <!-- Language switcher -->
+  <app-language-switcher aria-label="Language selector" />
+</mat-toolbar>

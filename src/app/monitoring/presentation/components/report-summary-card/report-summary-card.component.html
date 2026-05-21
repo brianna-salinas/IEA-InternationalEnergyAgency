@@ -1,0 +1,28 @@
+<mat-card class="energy-summary-card" role="article" [attr.aria-label]="'Energy Report for ' + reportItem().countryName">
+  <mat-card-header>
+    <mat-card-title class="card-country-header">{{ reportItem().countryName }}</mat-card-title>
+    <mat-card-subtitle class="card-country-code">{{ reportItem().countryCode }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content class="card-body-metrics">
+    <div class="metric-row">
+      <span class="metric-label">Energy Type:</span>
+      <span class="metric-value status-badge">{{ reportItem().energyType | uppercase }}</span>
+    </div>
+    <div class="metric-row">
+      <span class="metric-label">Energy Consumption:</span>
+      <span class="metric-value">{{ reportItem().consumption }} MWh</span>
+    </div>
+    <div class="metric-row">
+      <span class="metric-label">Energy Production:</span>
+      <span class="metric-value emphasis">{{ reportItem().production }} MWh</span>
+    </div>
+  </mat-card-content>
+
+  <mat-card-footer class="card-footer-timestamps">
+    <div class="footer-metadata-wrap">
+      <span><strong>Year:</strong> {{ reportItem().year }}</span>
+      <span class="time-stamp"><strong>Registered:</strong> {{ reportItem().registeredAt | date:'medium' }}</span>
+    </div>
+  </mat-card-footer>
+</mat-card>

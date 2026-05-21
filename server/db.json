@@ -1,0 +1,102 @@
+{
+  "energy-monitoring-centers": [
+    {
+      "id": 1,
+      "name": "Solar Energy Monitoring Center",
+      "energyType": "solar"
+    },
+    {
+      "id": 2,
+      "name": "Wind Energy Monitoring Center",
+      "energyType": "wind"
+    },
+    {
+      "id": 3,
+      "name": "Hydro Energy Monitoring Center",
+      "energyType": "hydro"
+    },
+    {
+      "id": 4,
+      "name": "Nuclear Energy Monitoring Center",
+      "energyType": "nuclear"
+    },
+    {
+      "id": 5,
+      "name": "Gas Energy Monitoring Center",
+      "energyType": "gas"
+    },
+    {
+      "id": 6,
+      "name": "Oil Energy Monitoring Center",
+      "energyType": "oil"
+    }
+  ],
+  "energy-report-items": [
+    {
+      "id": 1,
+      "centerId": 1,
+      "energyType": "solar",
+      "countryCode": "US-MS",
+      "countryName": "United States",
+      "consumption": 1250,
+      "production": 1800,
+      "year": 2025,
+      "registeredAt": "2026-05-18T09:30:00"
+    },
+    {
+      "id": 2,
+      "centerId": 2,
+      "energyType": "wind",
+      "countryCode": "US-AL",
+      "countryName": "United States",
+      "consumption": 980,
+      "production": 1450,
+      "year": 2025,
+      "registeredAt": "2026-05-18T10:15:00"
+    },
+    {
+      "id": 3,
+      "centerId": 3,
+      "energyType": "hydro",
+      "countryCode": "US-PA",
+      "countryName": "United States",
+      "consumption": 2100,
+      "production": 2600,
+      "year": 2025,
+      "registeredAt": "2026-05-18T11:00:00"
+    },
+    {
+      "id": 4,
+      "centerId": 4,
+      "energyType": "nuclear",
+      "countryCode": "US-WI",
+      "countryName": "United States",
+      "consumption": 3400,
+      "production": 3900,
+      "year": 2025,
+      "registeredAt": "2026-05-18T12:20:00"
+    },
+    {
+      "id": 5,
+      "centerId": 5,
+      "energyType": "gas",
+      "countryCode": "US-NH",
+      "countryName": "United States",
+      "consumption": 2750,
+      "production": 3100,
+      "year": 2025,
+      "registeredAt": "2026-05-18T13:10:00"
+    },
+    {
+      "id": 6,
+      "centerId": 6,
+      "energyType": "oil",
+      "countryCode": "US-ID",
+      "countryName": "United States",
+      "consumption": 4200,
+      "production": 4600,
+      "year": 2025,
+      "registeredAt": "2026-05-18T14:05:00"
+    }
+  ]
+}
